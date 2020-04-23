@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
 namespace TestConsole
 {
@@ -31,8 +28,17 @@ namespace TestConsole
 
             var v4 = v3 + 3.14159265358979;
 
-            double pi = 3.1515;
+            CultureInfo ru = new CultureInfo("ru-ru");
+            CultureInfo en_us = new CultureInfo("en-us");
+            CultureInfo invariant = CultureInfo.InvariantCulture;
+            CultureInfo current = CultureInfo.CurrentCulture;
+            CultureInfo current_ui = CultureInfo.CurrentUICulture;
+
+
+            double pi = double.Parse("3,1415", ru);
             int i = (int)pi;
+
+            Console.WriteLine(pi);
 
             double Length = v4;
 
