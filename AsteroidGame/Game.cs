@@ -8,16 +8,36 @@ using System.Windows.Forms;
 
 namespace AsteroidGame
 {
+    /// <summary>
+    /// Класс игровой логики
+    /// </summary>
     internal static class Game
     {
+
+        /// <summary>
+        /// Интервал времени таймера кадра игры
+        /// </summary>
+        private const int __TimerInterval = 100;
+
         private static BufferedGraphicsContext __Context;
         private static BufferedGraphics __Buffer;
 
-        private static VisualObject __GameObjects;
+        private static VisualObject[] __GameObjects;
 
-        public static int Width { get; set; }
-        public static int Heigth { get; set; }
+        /// <summary>
+        /// Ширина игрового поля
+        /// </summary>
+        public static int Width { get; private set; }
 
+        /// <summary>
+        /// Высота игрового поля
+        /// </summary>
+        public static int Heigth { get; private set; }
+
+        /// <summary>
+        /// Инициализация игровой логики
+        /// </summary>
+        /// <param name="form">Игровая форма</param>
         public static void Initialize(Form form)
         {
             Width = form.Width;
@@ -27,7 +47,7 @@ namespace AsteroidGame
             Graphics g = form.CreateGraphics();
             __Buffer = __Context.Allocate(g, new Rectangle(0, 0, Width, Heigth));
 
-            Timer timer = new Timer { Interval = 100 };
+            Timer timer = new Timer { Interval = __TimerInterval };
             timer.Tick += OnVimerTick;
             timer.Start();
 

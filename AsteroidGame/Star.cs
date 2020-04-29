@@ -16,8 +16,15 @@ namespace AsteroidGame
 
         public override void Draw(Graphics g)
         {
-            g.DrawLine(Pens.WhiteSmoke, _Position.X, _Position.Y, _Position.X + _Size.Width, _Position.Y + _Size.Height);
-            g.DrawLine(Pens.White, _Position.X + _Size.Width, _Position.Y, _Position.X, _Position.Y + _Size.Height );
+            g.DrawLine(Pens.WhiteSmoke,
+                _Position.X, _Position.Y,
+                _Position.X + _Size.Width,
+                _Position.Y + _Size.Height);
+
+            g.DrawLine(Pens.White,
+                _Position.X + _Size.Width,
+                _Position.Y, _Position.X,
+                _Position.Y + _Size.Height);
         }
 
 
@@ -26,6 +33,6 @@ namespace AsteroidGame
             _Position.X += _Direction.X;
             if (_Position.X < 0)
                 _Position.X = Game.Width + _Size.Width;
-        }        
+        }
     }
 }
