@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using TestConsole.Loggers;
 
 namespace TestConsole
 {
@@ -7,14 +8,15 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-           /* Logger log = new Logger();
+            Logger log = new TextFileLogger("text.log");
 
             log.LogInformation("Messge1");
             log.LogWarning("Info message");
             log.LogError("Error message");
-            */
 
-            Console.ReadLine();
+            log.Flush();
+
+            //Console.ReadLine();
             
         }       
     }            
