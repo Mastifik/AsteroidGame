@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using TestConsole.Loggers;
+using System.Diagnostics;
 
 namespace TestConsole
 {
@@ -10,7 +11,12 @@ namespace TestConsole
         {
             //Logger log = new TextFileLogger("text.log");
             //Logger log = new ConsoleLogger();
-            Logger log = new DebugOutputLogger();
+            //Logger log = new DebugOutputLogger();
+            Logger log = new TraceLogger();
+
+
+            Trace.Listeners.Add(new TextWriterTraceListener("logger.log"));
+            Trace.Listeners.Add(new XmlWriterTraceListener("logger.log.xml"));
 
 
             log.LogInformation("Messge1");
