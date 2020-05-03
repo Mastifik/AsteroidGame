@@ -32,9 +32,10 @@
   <Class Name="TestConsole.Loggers.TextFileLogger" Collapsed="true">
     <Position X="7.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABCAAAAAAAAAAAgAAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAABCAAAAAAAAAAAgAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Loggers\TextFileLogger.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="TestConsole.Loggers.TraceLogger" Collapsed="true">
     <Position X="9.5" Y="3.5" Width="1.5" />
@@ -46,9 +47,17 @@
   <Class Name="TestConsole.Student">
     <Position X="11.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAEIAAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAEIAAAAAAAAAAEAAQAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Student.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
+  <Interface Name="TestConsole.ILogger">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILogger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

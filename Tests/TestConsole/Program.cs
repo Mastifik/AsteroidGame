@@ -24,16 +24,23 @@ namespace TestConsole
             combine_log.Add(new TraceLogger());
             combine_log.Add(new TextFileLogger("new_log.log"));
 
-            ILogger log = combine_log;
-            log.LogInformation("Messge1");
-            log.LogWarning("Info message");
-            log.LogError("Error message");
+          
+            combine_log.LogInformation("Messge1");
+            combine_log.LogWarning("Info message");
+            combine_log.LogError("Error message");
 
-            
-            ComputerLongDataValue(100, log);
+            Student student = new Student { Name = "Иванов" };
+
+            ILogger log = combine_log;
+            ComputerLongDataValue(100, student);
 
             Console.WriteLine("Программа завершена!");
             Console.ReadLine();
+
+            using (var file_logger = new TextFileLogger("another.log"))
+            {
+                file_logger.LogInformation("123");
+            }
 
             combine_log.Flush();
 
@@ -46,7 +53,7 @@ namespace TestConsole
             for (var i = 0; i < Count; i++)
             {
                 result++;
-                Log.LogInformation($"Вычисление итерации{i}");
+                Log.Log($"Вычисление итерации{i}");
                 System.Threading.Thread.Sleep(100);
             }
 

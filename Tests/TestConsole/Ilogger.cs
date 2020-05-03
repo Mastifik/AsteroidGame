@@ -17,7 +17,7 @@ namespace TestConsole
         /// <param name="Message">Сообщение добавляемое в журнал</param>
         void Log(string Message);
 
-        /// <summary>
+       /* /// <summary>
         /// Добавить информационное есообщение
         /// </summary>
         /// <param name="Message">Сообщение добавляемое в журнал</param>
@@ -34,6 +34,6 @@ namespace TestConsole
         /// </summary>
         /// <param name="Message">Сообщение добавляемое в журнал</param>
         void LogError(string Message);
-        
+        */
     }
 }
