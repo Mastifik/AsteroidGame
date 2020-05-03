@@ -129,7 +129,7 @@ namespace AsteroidGame
             __Bullet?.Update();
             if(__Bullet is null || __Bullet.Rect.Left > Width)
             {
-                new rnd = new Random();
+                var rnd = new Random();
                 __Bullet = new Bullet(rnd.Next(0, Heigth));
             }
 
@@ -144,7 +144,7 @@ namespace AsteroidGame
                     {
                         __Bullet = null;
                         __GameObjects[i] = null;
-                        System.Media.SystemSound.Beep.Play();
+                        System.Media.SystemSounds.Beep.Play();
                     }
                 }
             }
