@@ -73,8 +73,10 @@ namespace AsteroidGame
             {
                 game_object.Draw(g);
             }
+           // if (__Bullet != null)
+           //     __Bullet.Draw(g);
 
-            __Bullet.Draw(g);
+            __Bullet?.Draw(g);
 
             __Buffer.Render();
         }
@@ -112,6 +114,8 @@ namespace AsteroidGame
                      asteroid_size));
             }
 
+            game_objects.Add(new Asteroid(new Point(Width/2, 200),new Point(- asteroid_max_speed, 0), asteroid_size));
+
             __Bullet = new Bullet(200);
             __GameObjects = game_objects.ToArray();
 
@@ -120,9 +124,30 @@ namespace AsteroidGame
         public static void Update()
         {
             foreach (var game_object in __GameObjects)
-                game_object.Update();
+                game_object?.Update();
 
-            __Bullet.Update();
+            __Bullet?.Update();
+            if(__Bullet is null || __Bullet.Rect.Left > Width)
+            {
+                new rnd = new Random();
+                __Bullet = new Bullet(rnd.Next(0, Heigth));
+            }
+
+            for(var i = 0; i < __GameObjects.Length; i++)
+            {
+                var obj = __GameObjects[i];
+                if(obj is ICollision)
+                {
+                    var collision_object = (ICollision)obj;
+                    if(__Bullet != null)
+                    if (__Bullet.CheckCollision(collision_object))
+                    {
+                        __Bullet = null;
+                        __GameObjects[i] = null;
+                        System.Media.SystemSound.Beep.Play();
+                    }
+                }
+            }
         }
 
     }
