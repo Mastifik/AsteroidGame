@@ -3,7 +3,7 @@ using System.Globalization;
 using TestConsole.Loggers;
 using System.Diagnostics;
 using System.Runtime.Serialization;
-
+using TestConsole.Service;
 
 namespace TestConsole
 {
@@ -21,7 +21,7 @@ namespace TestConsole
                     Name = $"Name {i}",
                     SurName = $"Surname {i}",
                     Patronimyc = $"Patronimyc {i}",
-                    Ratings = rnd.GetValues(rnd.Next(20, 30), 3 / 6)
+                    Ratings = rnd.GetValues(rnd.Next(20, 30), 3, 6)
                 });
 
             foreach( var student in decanat)

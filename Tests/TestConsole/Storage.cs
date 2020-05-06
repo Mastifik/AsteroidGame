@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestConsole
 {
-    public abstract class Storage<TItem> : IEnumerable<TItem>
+    internal abstract class Storage<TItem> : IEnumerable<TItem>
     {
         private readonly List<TItem> _Items = new List<TItem>();
 
