@@ -14,6 +14,8 @@ namespace TestConsole
         //private Func<int, double, string, bool>
         private Action<TItem> _AddObservers;
 
+        public event Action<TItem> ItemRemoved;
+
         public int Count => _Items.Count;
 
         public TItem this[int index]
@@ -46,7 +48,19 @@ namespace TestConsole
 
         public virtual bool Remove(TItem item)
         {
-            return _Items.Remove(item);
+            var result = _Items.Remove(item);
+
+            if (result)
+            {
+                /*var handlers = ItemRemove;
+                if (handlers != null)
+                    handlers(item);*/
+
+                ItemRemoved?.Invoke(item);
+
+            }
+
+            return result;
         }
 
         public virtual bool IsContains(TItem item)
@@ -54,7 +68,7 @@ namespace TestConsole
             return _Items.Contains(item);
         }
 
-        public virtual void Clear() 
+        public virtual void Clear()
         {
             _Items.Clear();
         }
@@ -65,7 +79,7 @@ namespace TestConsole
         {
             Clear();
         }
-        
+
 
         public IEnumerator<TItem> GetEnumerator()
         {

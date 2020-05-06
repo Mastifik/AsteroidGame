@@ -14,10 +14,20 @@ namespace TestConsole
 
     class Program
     {
+
+        private static void OnStudentRemoved(Student student)
+        {
+            Console.WriteLine("Студент {0} был отчислен!", student.SurName);
+        }
         static void Main(string[] args)
         {
             var decanat = new Decanat();
+            decanat.SubscribeToAdd(RateStudent);
             decanat.SubscribeToAdd(PrintStudent);
+
+            decanat.ItemRemoved += OnStudentRemoved;
+
+
 
             var rnd = new Random();
 
@@ -27,13 +37,13 @@ namespace TestConsole
                     Name = $"Name {i}",
                     SurName = $"Surname {i}",
                     Patronimyc = $"Patronimyc {i}",
-                    Ratings = rnd.GetValues(rnd.Next(20, 30), 3, 6)
+                    //Ratings = rnd.GetValues(rnd.Next(20, 30), 3, 6)
                 });
 
-            foreach( var student in decanat)
+            /*foreach( var student in decanat)
             {
                 Console.WriteLine(student.Name);
-            }
+            }*/
 
             var student_to_remove = decanat[0];
 
