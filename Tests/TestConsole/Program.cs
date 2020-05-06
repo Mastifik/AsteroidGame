@@ -17,6 +17,7 @@ namespace TestConsole
         static void Main(string[] args)
         {
             var decanat = new Decanat();
+            decanat.SubscribeToAdd(PrintStudent);
 
             var rnd = new Random();
 
