@@ -1,13 +1,19 @@
 ﻿namespace TestConsole
 {
-   internal class Decanat : Storage<Student>
+   internal class Decanat : EntityStorage<Student>
     {
-        private int _MaxId = 1;
+        
+    }
 
-        public override void Add(Student item)
+    internal abstract class EntityStorage<TEntity> : Storage<TEntity> where TEntity : class, IEntity, new()
+    {
+        private int _Maxid = 1;
+
+        public override void Add(TEntity item)
         {
-            item.Id = _MaxId++;
+            item.Id = _Maxid++;
             base.Add(item);
+           
         }
     }
 }

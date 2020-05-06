@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace TestConsole
 {
-    internal class Student : IComparable<Student>, IEquatable<Student>
+    internal interface IEntity
+    {
+        int Id { get; set; }
+    }
+
+
+    internal class Student : IComparable<Student>, IEquatable<Student>, IEquatable<string>, IEntity
     {
         public int Id { get; set; }
 
@@ -62,4 +68,6 @@ namespace TestConsole
             return Name == other || SurName == other || Patronimyc == other;
         }
     }
+
+    
 }
