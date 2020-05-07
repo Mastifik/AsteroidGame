@@ -63,9 +63,29 @@ namespace AsteroidGame.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Asteroid {
+        internal static System.Drawing.Bitmap Ast {
             get {
-                object obj = ResourceManager.GetObject("Asteroid", resourceCulture);
+                object obj = ResourceManager.GetObject("Ast", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Health {
+            get {
+                object obj = ResourceManager.GetObject("Health", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ship {
+            get {
+                object obj = ResourceManager.GetObject("Ship", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

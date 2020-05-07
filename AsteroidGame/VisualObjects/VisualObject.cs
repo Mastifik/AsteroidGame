@@ -12,8 +12,18 @@ namespace AsteroidGame.VisualObjects
         protected Point _Position;
         protected Point _Direction;
         protected Size _Size;
+        private Point position;
+        private Point direction;
+        private Size size;
 
-        protected VisualObject(Point Position, Point Direction, Size Size)
+        protected VisualObject(Point position, Point direction, Size size)
+        {
+            this.position = position;
+            this.direction = direction;
+            this.size = size;
+        }
+
+        protected VisualObject(Point Position, Point Direction, Size Size, Bitmap ship)
         {
             _Position = Position;
             _Direction = Direction;

@@ -13,13 +13,25 @@ namespace AsteroidGame.VisualObjects
 
 
         private int _Energy = 20;
+        private Point point1;
+        private Point point2;
+        private Size size;
 
         public int Energy => _Energy;
 
         public Rectangle Rect => new Rectangle(_Position, _Size);
 
-        public SpaceShip(Point Position, Point Direction, Size Size) : base(Position, Direction, Size)
+        public SpaceShip(Point Position, Point Direction, int ImageSize) :
+            base(Position, Direction, new Size(ImageSize, ImageSize),Properties.Resources.Ship)
         {
+
+        }
+
+        public SpaceShip(Point point1, Point point2, Size size)
+        {
+            this.point1 = point1;
+            this.point2 = point2;
+            this.size = size;
         }
 
         public override void Draw(Graphics g)
@@ -38,7 +50,7 @@ namespace AsteroidGame.VisualObjects
         {
             var is_collision = Rect.IntersectsWith(obj.Rect);
 
-            if(is_collision && obj is Asteroid asteroid)
+            if (is_collision && obj is Asteroid asteroid)
             {
                 ChangeEnergy(-asteroid.Power);
             }
@@ -64,6 +76,7 @@ namespace AsteroidGame.VisualObjects
             if (_Position.Y - _Size.Height < Game.Heigth)
                 _Position.Y += _Direction.Y;
         }
+
 
     }
 }

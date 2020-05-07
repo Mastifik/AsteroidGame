@@ -15,7 +15,7 @@ namespace AsteroidGame.VisualObjects
         public int Power { get; set; } = 3;
 
         public Asteroid(Point Position, Point Direction, int ImageSize) : //base(Position, Direction, new Size(ImageSize, ImageSize), __Image)
-            base(Position, Direction, new Size(ImageSize, ImageSize), Properties.Resources.Asteroid)
+            base(Position, Direction, new Size(ImageSize, ImageSize), Properties.Resources.Ast)
         {
 
         }
