@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.Outlook;
-using System.IO;
+﻿using System.IO;
 
 
 namespace TestConsole

@@ -27,12 +27,7 @@ namespace AsteroidGame.VisualObjects
 
         }
 
-        public SpaceShip(Point point1, Point point2, Size size)
-        {
-            this.point1 = point1;
-            this.point2 = point2;
-            this.size = size;
-        }
+      
 
         public override void Draw(Graphics g)
         {
@@ -77,6 +72,6 @@ namespace AsteroidGame.VisualObjects
                 _Position.Y += _Direction.Y;
         }
 
-
+       
     }
 }

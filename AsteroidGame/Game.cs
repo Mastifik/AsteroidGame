@@ -154,7 +154,7 @@ namespace AsteroidGame
             __Bullet = new Bullet(200);
             __GameObjects = game_objects.ToArray();
 
-            __SpaceShip = new SpaceShip(new Point(10, 400), new Point(5, 5), new Size(10, 10));
+            __SpaceShip = new SpaceShip(new Point(10, 400), new Point(5, 5), 10);
             __SpaceShip.Destroyed += OnShipDestroyed;
         }
         private static void OnShipDestroyed(object sender, EventArgs e)

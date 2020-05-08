@@ -18,17 +18,11 @@ namespace AsteroidGame.VisualObjects
 
         public HP SpaceShip;
         public int addHP = 1;
-        private static Rect Rect;
+       
 
         public void OnTriggerEnter(SpaceShip MySpaceShip)
         {
-            var MySpaceShip = Rect.IntersectsWith(HP.Rect);
-
-            if (MySpaceShip && addHP is SpaceShip)
-            {
-                SpaceShip.HP += addHP;
-                Destoyed (VisualObject HP)
-            }
+          
 
         }
 
