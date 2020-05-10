@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsteroidGame", "AsteroidGame\AsteroidGame.csproj", "{45BAE30F-341D-427A-BDFC-7A21F081077D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{40A67CCE-5889-415E-9CF3-A9C283A37946}"
+	ProjectSection(SolutionItems) = preProject
+		List.cs = List.cs
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "Tests\TestConsole\TestConsole.csproj", "{CB49C223-AE50-48C5-9292-53641BFBC4A7}"
 EndProject
