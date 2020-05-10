@@ -67,6 +67,9 @@ namespace TestConsole
 
             return Name == other || SurName == other || Patronimyc == other;
         }
+
+        public override string ToString() => $"[{Id}]:{SurName} {Name} {Patronimyc}";
+        
     }
 
     
