@@ -188,7 +188,7 @@ namespace AsteroidGame
                 {
                     var collision_object = (ICollision)obj;
 
-                    __SpaceShip.CheckCollision(collision_object);
+                   
 
                     foreach (var bullet in __Bullets.ToArray())
                         if (bullet.CheckCollision(collision_object))

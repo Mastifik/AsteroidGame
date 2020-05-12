@@ -72,6 +72,12 @@ namespace AsteroidGame.VisualObjects
                 _Position.Y += _Direction.Y;
         }
 
-       
+        public bool CheckCollision(ICollision obj)
+        {
+            var is_collision = Rect.IntersectsWith(obj.Rect);
+            if (is_collision && obj is Asteroid asteroid)
+                ChangeEnergy(-asteroid.Power);
+            return is_collision;
+        }
     }
 }
