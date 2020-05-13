@@ -47,7 +47,7 @@ namespace TextEditorWPF
 
             var file_name = dialog.FileName;
 
-            MainTextEdit.Text = FileDialog.ReadAllText(file_name);
+            MainTextEdit.Text = File.ReadAllText(file_name);
         }
 
         private void OnSaveFileMenuClick(object sender, RoutedEventArgs e)

@@ -60,7 +60,7 @@
                     <Button HorizontalAlignment="Left" Padding="30,10" Click="OnOpenFileMenuClick">Открыть</Button>
                     <Button HorizontalAlignment="Right" Padding="30,10" Click="OnSaveFileMenuClick">Сохранить</Button>
                 </Grid>
-                <TextBox Name="MainTextEdit" Style="{StaticResource TextEditorStyle}"/>
+                <TextBox Name="MainTextEdit" Style="{StaticResource TextEditorStyle}" BorderBrush="Black"/>
             </DockPanel>
         </GroupBox>
     </Grid>
