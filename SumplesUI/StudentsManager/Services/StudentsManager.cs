@@ -9,7 +9,7 @@ namespace StudentsManager.Services
 {
      internal class StudentsManager
     {
-        public List<StudentsGroup> Groups { get; private set; }
+        public List<StudentsGroup> Groups { get; }
 
         public StudentsManager()
         {
