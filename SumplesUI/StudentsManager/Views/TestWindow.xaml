@@ -7,6 +7,37 @@
         mc:Ignorable="d"
         Title="TestWindow" Height="450" Width="800">
     <Grid>
-        
+        <Ellipse Fill="Red" Stroke="DarkBlue" 
+                 StrokeThickness="4" 
+                 Margin="346,187,344,200"
+                 RenderTransformOrigin="0.861,1.674">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Slider Margin="30,0,30,0" VerticalAlignment="Top"/>
+        <Slider Orientation="Vertical" Margin="0,30,0,30" HorizontalAlignment="Left"/>
+        <Slider Orientation="Vertical" 
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom" 
+                Height="100" 
+                Margin="0,0,0,30"/>
+        <TextBox VerticalAlignment="Top" 
+                     HorizontalAlignment="Right" 
+                     Width="80" 
+                     Margin="0,25,30,0"/>
+        <TextBox VerticalAlignment="Bottom" 
+                 HorizontalAlignment="Left"
+                 Width="80"
+                 Margin="25,0,0,30"/>
+        <TextBox VerticalAlignment="Bottom"
+                 HorizontalAlignment="Right"
+                 Width="80"
+                 Margin="0,0,25,30"/>
     </Grid>
 </Window>
