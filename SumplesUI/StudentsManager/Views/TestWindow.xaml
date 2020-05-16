@@ -9,18 +9,23 @@
     <Grid>
         <Ellipse Fill="Red" Stroke="DarkBlue" 
                  StrokeThickness="4" 
-                 Margin="346,187,344,200"
-                 RenderTransformOrigin="0.861,1.674">
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Width="130"
+                 Height="60"
+                 Margin="30,30"
+                 RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
+                    <RotateTransform Angle="{Binding Value, ElementName=AngleValue}"/>
+                    <TranslateTransform X="{Binding Value, ElementName=HorizontalValue}"
+                                        Y="{Binding Value, ElementName=VerticalValue}"/>
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
-        <Slider x:Name="HorizonyalValue" Margin="30,0,30,0" VerticalAlignment="Top"
+        <Slider x:Name="HorizontalValue" Margin="30,0,30,0" VerticalAlignment="Top"
                 Maximum="800"
                 ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}"/>
         <Slider x:Name="VerticalValue" Orientation="Vertical" Margin="0,30,0,30" HorizontalAlignment="Left"
