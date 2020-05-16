@@ -7,7 +7,7 @@ using StudentsManager.Models;
 
 namespace StudentsManager.Services
 {
-     internal class StudentsManager
+    internal class StudentsManager
     {
         public List<StudentsGroup> Groups { get; }
 
@@ -18,7 +18,10 @@ namespace StudentsManager.Services
                 .Range(1, 10)
                 .Select(i => new StudentsGroup
                 {
-                    Id = i, Students = Enumerable.Range(1, 10)
+                    Id = i,
+                    Name = $"Group {i}",
+                    Students = Enumerable.
+                    Range(1, 10)
                     .Select(j => new Student
                     {
                         Id = student_id,
@@ -27,15 +30,15 @@ namespace StudentsManager.Services
                         Patronymic = $"Patronymic {student_id++}"
                     })
                     .ToList()
-                })  
+                })
                 .ToList();
 
-            foreach(var group in Groups)
-            foreach (var student in group.Students)
-                student.Group = group;
-            
+            foreach (var group in Groups)
+                foreach (var student in group.Students)
+                    student.Group = group;
 
-            
+
+
         }
     }
 }

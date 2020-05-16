@@ -13,5 +13,8 @@ namespace StudentsManager.Models
         public string Name { get; set; }
 
         public List<Student> Students { get; set; } = new List<Student>();
+
+        public override string ToString() => $"[{Id}]{Name}";
+        
     }
 }
