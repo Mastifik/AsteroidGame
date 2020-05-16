@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace StudentsManager.Services
 {
-    class StudentsManager
+     internal class StudentsManager
     {
+
     }
 }
