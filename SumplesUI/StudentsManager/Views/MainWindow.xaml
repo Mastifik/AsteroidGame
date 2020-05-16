@@ -35,7 +35,8 @@
                         <ColumnDefinition Width="7*"/>
                     </Grid.ColumnDefinitions>
                     <GroupBox Header="Группы">
-                        <ListBox ItemsSource="{Binding Groups, Source={StaticResource StudentManager}}"></ListBox>
+                        <ListBox ItemsSource="{Binding Groups, Source={StaticResource StudentManager}}"
+                                 DisplayMemberPath="Name"/>
                     </GroupBox>
                     <GroupBox Header="Студенты группы" Grid.Column="1">
                         <ListBox></ListBox>
