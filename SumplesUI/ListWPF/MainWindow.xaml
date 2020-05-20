@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <Style x:Key="EditorStyle" TargetType="Employees">
+        <Style x:Key="EditorStyle" TargetType="TextBox">
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
@@ -23,7 +23,7 @@
         </Style>
     </Window.Resources>
     <Grid Name="Employees">
-        <Employees Name="TextEdit" Style="{StaticResource TextEditorStyle}" BorderBrush="Black"/>
+        <TextBox Name="TextEdit" Style="{StaticResource TextEdit}" BorderBrush="Black"/>
         <ListBox Margin="10,10,0,0" Name="lbEmployees" SelectionMode="Single"
                  SelectionChanged ="lbEmployees_SelectionChanged"
                  VerticalAlignment="Top"                 

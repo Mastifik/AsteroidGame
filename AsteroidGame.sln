@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListWPF", "SumplesUI\ListWP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsManager", "SumplesUI\StudentsManager\StudentsManager.csproj", "{89A208F6-4EC7-43EA-B1BA-97CE2F5D8CC8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{CC2D6F61-46BB-4068-BC44-AFD4CB8919F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetTest", "DataBase\AdoNetTest\AdoNetTest.csproj", "{6DD3F787-5831-4C39-80CD-F1BE9574F9C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +56,10 @@ Global
 		{89A208F6-4EC7-43EA-B1BA-97CE2F5D8CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89A208F6-4EC7-43EA-B1BA-97CE2F5D8CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89A208F6-4EC7-43EA-B1BA-97CE2F5D8CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD3F787-5831-4C39-80CD-F1BE9574F9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD3F787-5831-4C39-80CD-F1BE9574F9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD3F787-5831-4C39-80CD-F1BE9574F9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD3F787-5831-4C39-80CD-F1BE9574F9C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +70,7 @@ Global
 		{5F1F0860-FF3A-4791-B5C1-6DB8C875E2EF} = {8254DEF4-73DE-4F66-BE22-CC380761AE17}
 		{58EF02AA-4B92-4248-95DB-FB7E204BB14F} = {8254DEF4-73DE-4F66-BE22-CC380761AE17}
 		{89A208F6-4EC7-43EA-B1BA-97CE2F5D8CC8} = {8254DEF4-73DE-4F66-BE22-CC380761AE17}
+		{6DD3F787-5831-4C39-80CD-F1BE9574F9C7} = {CC2D6F61-46BB-4068-BC44-AFD4CB8919F9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AED62D7C-3FCA-4C0A-BFE1-A98639C9FE2F}
