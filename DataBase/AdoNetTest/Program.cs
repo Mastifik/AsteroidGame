@@ -82,5 +82,15 @@ namespace AdoNetTest
                         }
             }
         }
+
+        private const string __SqlSelectWithFilter = @"SELECT COUNT(*) FROM [dbo].[Player] WHERE {0}";
+
+        private static void ParametricQuery(string ConnectionString)
+        {
+            using(var cnnection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+            }
+        }
     }
 }
