@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.ServiceModel;
 using System.ServiceModel.Description;
@@ -82,6 +84,20 @@ namespace FileHosting
             host.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexNamedPipeBinding(), "mex");
 
             host.Open();
+
+            UdpClient udp_client = new UdpClient(8082);
+
+            //TcpClient tcp-client = new TcpClient(new IPEndPoint(IPAdress.Parse("192.168.0.1"), 80));
+            TcpClient tcp-client = new TcpClient();
+            tcp_client.Connect("192.168.0.1", 80);
+            using (var reader = new StreamReader(tcp_client.GetStream()))
+            {
+                while (!reader.EndOfStream)
+                    Console.WriteLine(reader.ReadLine());
+            }
+
+            Console.WriteLine("Хост запущен успешно!");
+            Console.ReadLine();
         }
     }
 
