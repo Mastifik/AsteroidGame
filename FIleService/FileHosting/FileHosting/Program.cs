@@ -38,18 +38,28 @@ namespace FileHosting
             {
                 s1 = (Student)binary_formatter.Deserialize(bin_file);
                 s2 = (Student)xml_serializer.Deserialize(xml_file);*/
+            //}
+
+            /*var student = new Student();
+
+            var student_type = student.GetType();
+
+            var student_type2 = typeof(Student);
+
+            var studeny_name = student_type.GetProperty("Name");
+
+            studeny_name.SetValue(student, "Hello, World!");*/
+
         }
     }
+
+   /* [Serializable]
+    internal class Student
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateTime Birthday { get; set; }
+        public XmlSchema GetSchema() => null;
+    }*/
 }
-
-/*[Serializable]
-internal class Student
-{
-    public string Name { get; set; }
-    public string Surname { get; set; }
-    public DateTime Birthday { get; set; }
-    public XmlSchema GetSchema() => null;
-
-
-}*/
 
