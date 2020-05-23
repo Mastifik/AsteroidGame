@@ -8,5 +8,6 @@ namespace FileHosting.Interfaces
 {
     public class Class1
     {
+
     }
 }

@@ -16,7 +16,7 @@ namespace FileHosting
         {
 
 
-            var student = new Student
+            /*var student = new Student
             {
                 Name = "Student name",
                 Surname = "Student surname",
@@ -37,18 +37,19 @@ namespace FileHosting
             using (var xml_file = File.Open("student.xml", FileMode.Open))
             {
                 s1 = (Student)binary_formatter.Deserialize(bin_file);
-                s2 = (Student)xml_serializer.Deserialize(xml_file);
-            }
+                s2 = (Student)xml_serializer.Deserialize(xml_file);*/
         }
     }
-
-    internal class Student 
-    {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public DateTime Birthday { get; set; }
-        public XmlSchema GetSchema() => null;
-        
-
-    }
 }
+
+/*[Serializable]
+internal class Student
+{
+    public string Name { get; set; }
+    public string Surname { get; set; }
+    public DateTime Birthday { get; set; }
+    public XmlSchema GetSchema() => null;
+
+
+}*/
+
