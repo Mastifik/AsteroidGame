@@ -1,8 +1,12 @@
-﻿using System;
+﻿using FileHosting.Interfaces;
+using FileHosting.Service;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.ServiceModel;
+using System.ServiceModel.Description;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
@@ -50,16 +54,44 @@ namespace FileHosting
 
             studeny_name.SetValue(student, "Hello, World!");*/
 
+            var host = new ServiceHost(typeof(FileService),
+                new Uri("http://localhost:8080/FileService"), //netsh http add urlacl url=http://+:port number/ user=\user name
+                new Uri("net.tcp://localhost/FileService"), //netsh advfirewall firewall add name=\"rule_name"\ dir=in actoin=allow protocol=TCP localport=port
+                new Uri("net.pipe://localhost/FileService")
+                );
+
+            host.AddServiceEndpoint(
+                typeof(IFileService),
+                new BasicHttpBinding(),
+                "http://localhost:8080/FileService");
+
+            host.AddServiceEndpoint(
+                typeof(IFileService),
+                new NetTcpBinding(),
+                "net.tcp://localhost/FileService");
+
+            host.AddServiceEndpoint(
+                typeof(IFileService),
+                new NetNamedPipeBinding(),
+                "net.pipe://localhost/FileService");
+
+            host.Description.Behaviors.Add(new ServiceMetadataBehavior { HttpGetEnabled = true });
+
+            host.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexHttpBinding(), "mex");
+            host.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexTcpBinding(), "mex");
+            host.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexNamedPipeBinding(), "mex");
+
+            host.Open();
         }
     }
 
-   /* [Serializable]
-    internal class Student
-    {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public DateTime Birthday { get; set; }
-        public XmlSchema GetSchema() => null;
-    }*/
+    /* [Serializable]
+     internal class Student
+     {
+         public string Name { get; set; }
+         public string Surname { get; set; }
+         public DateTime Birthday { get; set; }
+         public XmlSchema GetSchema() => null;
+     }*/
 }
 
