@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "Clients\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileHosting.Interfaces", "FileHosting.Interfaces\FileHosting.Interfaces.csproj", "{649D2295-4E86-4DD4-A57C-E63224F8AF99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClientAuto", "ConsoleClientAuto\ConsoleClientAuto.csproj", "{417749C3-C147-42A9-A9CF-0BCFBA7E779A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +31,17 @@ Global
 		{649D2295-4E86-4DD4-A57C-E63224F8AF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{649D2295-4E86-4DD4-A57C-E63224F8AF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{649D2295-4E86-4DD4-A57C-E63224F8AF99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{417749C3-C147-42A9-A9CF-0BCFBA7E779A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417749C3-C147-42A9-A9CF-0BCFBA7E779A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417749C3-C147-42A9-A9CF-0BCFBA7E779A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417749C3-C147-42A9-A9CF-0BCFBA7E779A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FB4FB87E-5A73-4527-B4BA-8373FD886A69} = {804ED287-C3DF-45E6-8F11-08E7F4E2A83E}
+		{417749C3-C147-42A9-A9CF-0BCFBA7E779A} = {804ED287-C3DF-45E6-8F11-08E7F4E2A83E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1BD6E8FA-AD06-4F7B-9312-A7C047EA605F}
